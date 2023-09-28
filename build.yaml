@@ -14,4 +14,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: ["ergo_s1_oe_left","ergo_s1_oe_right"]
+    shield: ergo_s1_oe_left
+  - board: nice_nano_v2
+    shield: ergo_s1_oe_right
