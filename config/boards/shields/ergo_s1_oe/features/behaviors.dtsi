@@ -1,0 +1,25 @@
+// Layer Tap 
+// The "layer-tap" behavior enables a layer when a key is held, and outputs a keypress when the key
+// is only tapped for a short time.
+&lt {
+    tapping-term-ms = <TAPPING_TERM>;
+    flavor = "tap-preferred";
+    quick-tap-ms = <QUICK_TAP_TERM>;
+};
+
+
+/ {
+  behaviors {
+    // homerow mods (gqt: global-quick-tap)
+    hm: global-quick-tap {
+        compatible = "zmk,behavior-hold-tap";
+        label = "home-row-mods";
+        #binding-cells = <2>;
+        tapping-term-ms = <TAPPING_TERM>;
+        quick-tap-ms = <QUICK_TAP_TERM>;
+        flavor = "tap-preferred";
+        global-quick-tap;
+        bindings = <&kp>, <&kp>;
+    };
+  };
+};
